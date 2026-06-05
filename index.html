@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vitão Corretor</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="app">
@@ -20,12 +21,12 @@
 
       <nav class="sidebar__nav">
         <ul>
-          <li><a href="#dashboard" class="nav-item active">Dashboard</a></li>
-          <li><a href="#imoveis" class="nav-item">Imóveis</a></li>
-          <li><a href="#proprietarios" class="nav-item">Proprietários</a></li>
-          <li><a href="#clientes" class="nav-item">Leads</a></li>
-          <li><a href="#visitas" class="nav-item">Visitas</a></li>
-          <li><a href="#financeiro" class="nav-item">Financeiro</a></li>
+          <li><a href="#dashboard" class="nav-item active" data-view="dashboard">Dashboard</a></li>
+          <li><a href="#imoveis" class="nav-item" data-view="imoveis">Imóveis</a></li>
+          <li><a href="#proprietarios" class="nav-item" data-view="proprietarios">Proprietários</a></li>
+          <li><a href="#clientes" class="nav-item" data-view="clientes">Leads</a></li>
+          <li><a href="#visitas" class="nav-item" data-view="visitas">Visitas</a></li>
+          <li><a href="#financeiro" class="nav-item" data-view="financeiro">Financeiro</a></li>
         </ul>
       </nav>
 
@@ -46,8 +47,13 @@
       <header class="topbar">
         <button class="menu-toggle" id="menuToggle">☰</button>
         <div class="topbar__title">
-          <h2>Dashboard</h2>
-          <p>Visão geral da sua imobiliária</p>
+          <h2 id="pageTitle">Dashboard</h2>
+          <p id="pageSubtitle">Visão geral da sua imobiliária</p>
+        </div>
+        <div class="topbar__actions">
+          <div class="search">
+            <input type="text" id="globalSearch" placeholder="Buscar..." />
+          </div>
         </div>
       </header>
 
